@@ -10,7 +10,7 @@ const responseFetchContents = async (url) => {
 }
 
 const RenderFetchJSON = async () => {
-    const response = await responseFetchContents('../json/app.json');
+    const response = await responseFetchContents(`${window.location.hostname + window.location.pathname}json/app.json`);
     const data = response;
     data.forEach(({ id, title }, index) => {
         form.insertAdjacentHTML('afterbegin', `
