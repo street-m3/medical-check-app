@@ -3,14 +3,14 @@
 const form = document.form01;
 
 const responseFetchContents = async (url) => {
-    const response = await fetch(typeof url === 'string' ? url : false, {
+    const response = await fetch(url, {
         method: 'GET',
     }).catch((err) => console.log(err));
     return response.json();
 }
 
 const RenderFetchJSON = async () => {
-    const response = await responseFetchContents(`${window.location.hostname + window.location.pathname}json/app.json`);
+    const response = await responseFetchContents(`${window.location}json/app.json`);
     const data = response;
     data.forEach(({ id, title }, index) => {
         form.insertAdjacentHTML('afterbegin', `
