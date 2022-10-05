@@ -11,7 +11,17 @@
 
 <body>
     <div class="SiteWrapper">
-        <header role="banner"></header>
+        <header class="s-Header" role="banner">
+            <div class="ly-Inner_Grid -sm">
+                <div class="s-Header_Brand">
+                    <h1 class="s-Header_Brand-Title">
+                        <span class="s-Header_Brand-Phrase">腸</span>
+                        <span>チェック</span>
+                    </h1>
+                    <p class="s-Header_Brand-Subtitle">大腸がんは早期発見が大切です。気になるところを今すぐチェック!</p>
+                </div>
+            </div>
+        </header>
 
         <main role="main">
             <section class="scope-container u-content-area -top -bottom">
@@ -27,65 +37,14 @@
             </section>
         </main>
 
-        <!-- <div class="select-os">
-            <input type="radio" id="windows" name="os" value="windows" class="windows" checked>
-            <label for="windows">
-                <i class="fab fa-windows"> Windows
-            </label>
-            <input type="radio" id="osx" name="os" value="osx" class="osx">
-            <label for="osx">
-                <i class="fab fa-apple"> OSX
-            </label>
-            <input type="radio" id="linux" name="os" value="unix" class="linux">
-            <label for="linux">
-                <i class="fab fa-linux"> Linux
-            </label>
-        </div>
-
-        <style>
-            .select-os input {
-                display: none;
-            }
-
-            .select-os input[type="radio"]:checked.windows+label {
-                color: #3275bc;
-                border: 2px solid #3275bc;
-                background-color: #d0e6fd;
-            }
-
-            .select-os input[type="radio"]:checked.osx+label {
-                color: #000;
-                border: 2px solid #000;
-                background-color: #eaeaea;
-            }
-
-            .select-os input[type="radio"]:checked.linux+label {
-                color: #bf9701;
-                border: 2px solid #bf9701;
-                background-color: #fbf4dc;
-            }
-
-            .select-os label {
-                color: #ddd;
-                border: 2px solid #ddd;
-                text-align: center;
-                display: inline-block;
-                padding: 5px 0px;
-                width: 120px;
-            }
-            /* f3f8ff
-            da3170
-            fdf2f9 */
-
-            .select-os label:hover {
-                color: #aaa;
-                border: 2px solid #aaa;
-                cursor: pointer;
-            }
-        </style> -->
-
-        <footer role="contentinfo"></footer>
+        <footer class="s-Footer" role="contentinfo">
+            <div class="ly-Inner_Grid -sm"></div>
+        </footer>
     </div>
+    <script>
+        const Footer = document.querySelector('footer');
+        Footer.firstElementChild.insertAdjacentHTML('afterbegin', `<p class="s-Footer_CopyRight u-align-center">&copy;&nbsp;${new Date().getFullYear()}Junichi Takabatake</p>`)
+    </script>
     <script src="./js/main.js" type="module"></script>
 </body>
 
