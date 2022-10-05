@@ -111,6 +111,7 @@ section {
 -------------------------------------------------------------------------- */
 :root {
     --color-white: #fff;
+    --color-accent: #5c9ee7;
     --color-black: #151515;
     --color-text-primary: #2d1b0e;
     --color-text-second: #222;
@@ -588,11 +589,11 @@ table {
 }
 
 .u-content-area.-top {
-    padding-top: clamp(100px, calc(6.25rem + ((1vw - 4.14px) * 5.2521)), 150px);
+    padding-top: 40px;
 }
 
 .u-content-area.-bottom {
-    padding-bottom: 100px;
+    padding-bottom: 52px;
 }
 
 .u-title-ellipsis {
@@ -759,7 +760,7 @@ input[type="radio"]:checked.c-checked-Radio-Move+label {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #5c9ee7;
+    background: var(--color-accent);
     color: white;
     font-weight: bold;
     font-size: 15px;
@@ -804,4 +805,51 @@ input[type="radio"]:checked.c-checked-Radio-Move+label {
     margin-top: 2rem;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.s-Header > * {
+    padding: 2rem 0;
+}
+
+.s-Header_Brand {
+    position: relative;
+    text-align: center;
+}
+
+.s-Header_Brand-Title {
+    font-family: var(--font-sans-ja);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.s-Header_Brand-Title>.s-Header_Brand-Phrase {
+    --circle-size: 120px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--circle-size);
+    width: var(--circle-size);
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-radius: 50%;
+    font-size: 3.2rem;
+    transform: rotate(-14deg);
+    margin: 8px;
+}
+
+.s-Header_Brand-Subtitle {
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.s-Footer {
+    background-color: #e1e1e1;
+}
+
+.s-Footer>* {
+    height: 60px;
+    align-items: center;
+    font-size: 12px;
 }
