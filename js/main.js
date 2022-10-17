@@ -19,9 +19,9 @@ const RenderFetchJSON = async () => {
                     ${title}
                 </h3>
                 <div class="app-data-apply">
-                    <input type="radio" id="come-${id}-${index}" name="label${id}" value="come" class="c-checked-Radio-Come is-checked-target" required>
+                    <input type="radio" id="come-${id}-${index}" name="label${id}" value="come" class="c-checked-Radio -Come is-checked-target" required>
                     <label class="app-data-Select" for="come-${id}-${index}">はい</label>
-                    <input type="radio" id="move-${id}-${index}" name="label${id}" value="move" class="c-checked-Radio-Move" required>
+                    <input type="radio" id="move-${id}-${index}" name="label${id}" value="move" class="c-checked-Radio -Move" required>
                     <label class="app-data-Select" for="move-${id}-${index}">いいえ</label>
                 </div>
             </div>
@@ -47,7 +47,7 @@ class HealthChecker {
         this.targetInputRadio = this.root.querySelectorAll('input[type="radio"]');
         this.answerSendButton = this.root.querySelector('.app-content-Result-answerOutput-Button');
         this.resultOutputInner = document.querySelector('.app-content-Result-answerName-Text');
-        this.radioOtherChecked = this.root.querySelectorAll('.c-checked-Radio-Come');
+        this.radioOtherChecked = this.root.querySelectorAll('.c-checked-Radio.-Come');
         this.resultCheckHead = document.querySelector('.app-content-Result-answerName-First');
         this.checkListLength = this.targetInputRadio.length / 2;
 
@@ -58,7 +58,6 @@ class HealthChecker {
 
     init() {
         this.answerSendButton.addEventListener(this.touchEventListener, (e) => {
-            // console.log(e);
             this._checkInput();
         });
     }
@@ -75,6 +74,7 @@ class HealthChecker {
 
         for (let i = 0; i < this.root.elements.length - 1; i++) {
             const checkedAnswer = this.root.elements[i];
+            console.log(this.root.elements);
             if (checkedAnswer.checked === true) {
                 flag = true;
                 if (checkedAnswer.value === 'come' && count > this.checkListLength / 2) {
